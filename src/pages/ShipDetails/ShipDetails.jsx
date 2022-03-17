@@ -15,13 +15,15 @@ const ShipDetails = () => {
   return (
     <>
       <h3>Starship Page</h3>
-      <p>Name: {shipDetails.name}</p>
-      <p>Model: {shipDetails.model}</p>
-      <Link 
-      to='/'
-      >
+      <div className='detail-card'>
+        <p>Name: {shipDetails.name}</p>
+        <p>Model: {shipDetails.model}</p>
+        <Link 
+        to='/'
+        >
         Return
-      </Link><br />
+        </Link><br />
+      </div>
     </>
   );
 }
