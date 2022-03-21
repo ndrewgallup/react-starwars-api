@@ -12,30 +12,32 @@ const ShipList = (props) => {
 
   return (
     <>
-    
-      <h3>Starship List</h3>
-        {ShipList.length ?
-        <>
-        <div className='icon-container'>
-          {ships.map((ship) => (
-            <Link key={ship.name}
-            to='/ship-details' 
-            state={{ ship }}
-            >
-              <div id='classDiv'>
-                {ship.name}
-              </div>
-            </Link>
-            
-          ))}
-        </div>
-        </>
-        :
-        <>
-        <h2>Loading starships...</h2>
-        </>}
-    </>
-  );
+    <div>
+   
+      <div className="icon-container">
+      {ships.length ?
+      <>
+        {ships.map((ship) => (
+          <Link
+          to='/ship-details'
+          state={{ship}}
+          style={{textDecoration: 'none'}}
+          >
+            <div key={ship.name} id='classDiv'>
+              {ship.name}
+            </div>
+          </Link>
+        ))}
+      </>
+      :
+      <>
+        <p>Loading starship list...</p>
+      </>
+      }
+      </div>
+    </div>
+  </>
+)
 }
 
 export default ShipList;

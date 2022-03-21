@@ -14,12 +14,16 @@ const ShipDetails = () => {
 
   return (
     <>
-      <h3>Starship Page</h3>
+      <h3>{shipDetails.name}</h3>
       <div className='detail-card'>
-        <p>Name: {shipDetails.name}</p>
+        
         <p>Model: {shipDetails.model}</p>
+        <p>Length: {shipDetails.length} m</p>
+        <p>Crew: {shipDetails.crew}</p>
+      
         <Link 
         to='/'
+        
         >
         Return
         </Link><br />
